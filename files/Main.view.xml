@@ -1,7 +1,7 @@
 <mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.demo.SAPHEREApp.controller.Main" displayBlock="true">
 	<App id="idAppControl">
 		<pages>
-			<Page title="{i18n>Title}">
+			<Page title="{i18n>title}">
 			<content>
 				
 		        <Input xmlns="sap.m" id="inputPlace" value="Las Vegas"/>
