@@ -192,11 +192,11 @@ sap.ui.define([
 			return oInputValue.getValue();
 		},
 		_getAppId: function(oView) {
-			var appId =	oView.getModel("i18n").getResourceBundle().getText("appId");
+			var appId =	oView.getModel("here").getResourceBundle().getText("appId");
 			return appId;
 		},
 		_getAppCode: function(oView) {
-			var appCode = oView.getModel("i18n").getResourceBundle().getText("appCode");
+			var appCode = oView.getModel("here").getResourceBundle().getText("appCode");
 			return appCode;
 		},
 		_headers : {"Content-Type":"application/json","Accept":"application/json, text/html;charset=utf-8"}
