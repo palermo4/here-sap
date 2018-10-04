@@ -1,0 +1,114 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.demo.SAPHEREApp.controller.Main" displayBlock="true">
+	<App id="idAppControl">
+		<pages>
+			<Page title="{i18n>Title}">
+			<content>
+				
+		        <Input xmlns="sap.m" id="inputPlace" value="Las Vegas"/>
+				
+		        <sap.ui.layout:Grid xmlns:sap.ui.layout="sap.ui.layout" id="grid0">
+		            <sap.ui.layout:content>
+		                <ObjectListItem title="Map" intro="Demo" icon="sap-icon://map-2" id="itemMap" type="Active" press=".demoMap"/>
+		                <ObjectListItem title="Geocode" intro="Demo" icon="sap-icon://locate-me" id="itemGeocode" press=".demoGeocoder" activeIcon="sap-icon://locate-me" type="Active"/>
+		                <ObjectListItem title="Weather" intro="Demo" icon="sap-icon://umbrella" id="itemWeather" press=".demoWeather" type="Active"/>
+		                <ObjectListItem title="Routing" intro="Demo" icon="sap-icon://journey-arrive" id="itemRouting" press=".demoRouting" type="Active"/>
+		           </sap.ui.layout:content>
+		        </sap.ui.layout:Grid>
+		        
+		        <Panel id="panelMap" headerText="Map Results" xmlns="sap.m" width="auto" expandable="true" expanded="true" visible="false">
+		            <headerToolbar>
+		                <Toolbar id="toolbarMap">
+		                    <Title text="Map Results"/>
+		               </Toolbar>
+		            </headerToolbar>
+		            <content>
+		    			<HBox width="100%" id="hbox0">
+						<VBox id="BoxMapDynamic">
+						<Label id="labelMapDynamic" text="Dynamic Map" xmlns="sap.m"  width="220px" />
+						
+						<Image id="imageDynamic" densityAware="false" width="200px" height="200px"  alt="map"/>
+						
+						</VBox>
+				 	    <VBox id="BoxMapPOI">
+						<Label id="labelMapStaticPOI" text="Static Map w/POI" xmlns="sap.m"  width="220px" />
+						
+						<Image id="imageStaticPOI" densityAware="false" width="200px" height="200px" alt="map"  
+							src="/map/mia/1.6/mapview?&amp;app_id={i18n>appId}&amp;app_code={i18n>appCode}&amp;poi=52.5%2C13.4%2C41.9%2C12.5%2C51.5%2C-0.1%2C48.9%2C2.3%2C40.4%2C-3.7&amp;poitxs=16&amp;poitxc=black&amp;poifc=yellow" />
+				 	    
+				 	    </VBox>
+				 	    <VBox id="BoxMapStaticPiP">
+						<Label id="labelMapStaticPip" text="Static Map w/PIP" xmlns="sap.m" width="220px" />
+						
+						<Image id="imageStaticPip"  densityAware="false" width="200px" height="200px" alt="map" 
+							src="/map/mia/1.6/mapview?app_id={i18n>appId}&amp;app_code={i18n>appCode}&amp;co=usa&amp;ci=phoenix&amp;z=14&amp;pip=-9" />
+				 	    
+				 	    </VBox>
+						<VBox id="BoxMapStatic">
+						<Label id="labelMapStatic" xmlns="sap.m" text="Static Map" width="220px" />
+						
+						<Image id="imageStatic" densityAware="false" width="200px" height="200px" alt="map" 
+							src="/map/mia/1.6/mapview?app_id={i18n>appId}&amp;app_code={i18n>appCode}&amp;co=usa&amp;ci=phoenix" />
+				 	    
+				 	    </VBox>
+				 	    <VBox id="BoxMapDefault">
+				 	    <Label id="labelMapDefault" xmlns="sap.m" text="Default Map" width="220px"/>
+				 	    
+						<Image id="imageDefault" densityAware="false" width="200px" height="200px" alt="map" 
+							src="/map/mia/1.6/mapview?app_id={i18n>appId}&amp;app_code={i18n>appCode}" />
+						
+						</VBox>
+						</HBox>
+		            </content>
+				</Panel>
+		        
+		        <Panel id="panelGeocoder" headerText="Geocoder Results" xmlns="sap.m" width="auto" expandable="true" expanded="true"  visible="false">
+		            <headerToolbar>
+		                <Toolbar id="toolbarGeocoder">
+		                    <Title text="Geocoder Results"/>
+		               </Toolbar>
+		            </headerToolbar>
+		            <content>
+				        <Label id="labelLat" text="Latitude:" width="100%"  xmlns="sap.m"/>
+				        <Label id="labelLngValue" text="{/Response/View/0/Result/0/Location/DisplayPosition/Latitude}" width="100%"  xmlns="sap.m"/>
+				        
+				        <Label id="labelLng" text="Longitude:" width="100%"  xmlns="sap.m"/>
+				        <Label id="labelLatValue" text="{/Response/View/0/Result/0/Location/DisplayPosition/Longitude}" width="100%"  xmlns="sap.m"/>
+		            </content>
+				</Panel>
+				
+				<Panel id="panelWeather" headerText="Weather Results" xmlns="sap.m" width="auto" expandable="true" expanded="true"  visible="false">
+		            <headerToolbar>
+		                <Toolbar id="toolbarWeather">
+		                    <Title text="Weather Results"/>
+		               </Toolbar>
+		            </headerToolbar>
+		            <content>
+					
+						<Label id="labelWeather" text="{/alerts/alerts/0/description}" width="100%" xmlns="sap.m" />
+		            
+		            </content>
+				</Panel>
+				
+				<Panel id="panelRouting" headerText="Routing Results" xmlns="sap.m" width="auto" expandable="true" expanded="true"  visible="false">
+		            <headerToolbar>
+		                <Toolbar id="toolbarRouting">
+		                    <Title text="Routing Results"/>
+		               </Toolbar>
+		            </headerToolbar>
+		            <content>
+		    			<HBox width="100%" id="hboxRouting">
+							<VBox id="BoxMapRouting">
+							<Label id="labelMapRouting" text="Routing Map" xmlns="sap.m" width="600px" />
+							
+							<Image id="imageMapRouting" densityAware="false" width="600px" height="600px"  alt="map"/>
+							
+						</VBox>
+						</HBox>
+		            </content>
+				</Panel>
+
+			</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
