@@ -33,28 +33,28 @@
 						<Label id="labelMapStaticPOI" text="Static Map w/POI" xmlns="sap.m"  width="220px" />
 						
 						<Image id="imageStaticPOI" densityAware="false" width="200px" height="200px" alt="map"  
-							src="/map/mia/1.6/mapview?&amp;app_id={i18n>appId}&amp;app_code={i18n>appCode}&amp;poi=52.5%2C13.4%2C41.9%2C12.5%2C51.5%2C-0.1%2C48.9%2C2.3%2C40.4%2C-3.7&amp;poitxs=16&amp;poitxc=black&amp;poifc=yellow" />
+							src="/map/mia/1.6/mapview?&amp;app_id={here>appId}&amp;app_code={here>appCode}&amp;poi=52.5%2C13.4%2C41.9%2C12.5%2C51.5%2C-0.1%2C48.9%2C2.3%2C40.4%2C-3.7&amp;poitxs=16&amp;poitxc=black&amp;poifc=yellow" />
 				 	    
 				 	    </VBox>
 				 	    <VBox id="BoxMapStaticPiP">
 						<Label id="labelMapStaticPip" text="Static Map w/PIP" xmlns="sap.m" width="220px" />
 						
 						<Image id="imageStaticPip"  densityAware="false" width="200px" height="200px" alt="map" 
-							src="/map/mia/1.6/mapview?app_id={i18n>appId}&amp;app_code={i18n>appCode}&amp;co=usa&amp;ci=phoenix&amp;z=14&amp;pip=-9" />
+							src="/map/mia/1.6/mapview?app_id={here>appId}&amp;app_code={here>appCode}&amp;co=usa&amp;ci=phoenix&amp;z=14&amp;pip=-9" />
 				 	    
 				 	    </VBox>
 						<VBox id="BoxMapStatic">
 						<Label id="labelMapStatic" xmlns="sap.m" text="Static Map" width="220px" />
 						
 						<Image id="imageStatic" densityAware="false" width="200px" height="200px" alt="map" 
-							src="/map/mia/1.6/mapview?app_id={i18n>appId}&amp;app_code={i18n>appCode}&amp;co=usa&amp;ci=phoenix" />
+							src="/map/mia/1.6/mapview?app_id={here>appId}&amp;app_code={here>appCode}&amp;co=usa&amp;ci=phoenix" />
 				 	    
 				 	    </VBox>
 				 	    <VBox id="BoxMapDefault">
 				 	    <Label id="labelMapDefault" xmlns="sap.m" text="Default Map" width="220px"/>
 				 	    
 						<Image id="imageDefault" densityAware="false" width="200px" height="200px" alt="map" 
-							src="/map/mia/1.6/mapview?app_id={i18n>appId}&amp;app_code={i18n>appCode}" />
+							src="/map/mia/1.6/mapview?app_id={here>appId}&amp;app_code={here>appCode}" />
 						
 						</VBox>
 						</HBox>
