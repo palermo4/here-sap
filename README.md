@@ -1,4 +1,4 @@
-# HERE SAPUI DEMOS
+# HERE API SAPUI5 DEMOS
 
 Key files of [HERE API SAPUI5 Demo Session](https://sessioncatalog.sapevents.com/go/agendabuilder.sessions/?l=191&sid=71476_485667&locale=en_US) located in [Files](./files)
 
